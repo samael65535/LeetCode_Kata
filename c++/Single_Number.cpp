@@ -3,7 +3,7 @@
 // Note:
 // Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 
-// Solution:
+// Solution2:
 // 设置一个sum,加加减减出最后一个数
 #include <map>
 #include <iostream>
