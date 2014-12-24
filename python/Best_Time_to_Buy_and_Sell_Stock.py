@@ -21,3 +21,5 @@ class Solution:
 #     b = range(100000)
 #     # print a+b
 #     print s.maxProfit(a)
+
+
