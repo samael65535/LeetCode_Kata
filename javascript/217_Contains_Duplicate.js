@@ -6,7 +6,6 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    if (nums.length <= 1) return false;
     var dic = {};
     var iterator = nums.entries();
     var n = iterator.next();
@@ -20,6 +19,6 @@ var containsDuplicate = function(nums) {
     }
     return false
 };
-
 console.log(containsDuplicate([1,3,3,5,5,6]));
-console.log(containsDuplicate([1,1]));
+console.log(containsDuplicate([1,2]));
+console.log(containsDuplicate([]));
