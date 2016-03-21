@@ -13,7 +13,7 @@ var majorityElement = function(nums) {
     var currentElement = null;
     var currentCount = 0;
     for(var i = 0; i < nums.length; i ++) {
-        var v= nums[i];;
+        var v= nums[i];
         if (currentElement == v) currentCount ++;
         else {
             currentElement = v;
