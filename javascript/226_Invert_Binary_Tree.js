@@ -23,5 +23,7 @@ var invertTree = function(root) {
         return root;
     }
 };
+
+
 var root = leetcode.Tree.create([1,2,3,4,5,6]);
 console.log(invertTree(root));
