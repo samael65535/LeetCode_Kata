@@ -6,13 +6,25 @@
  * @return {number}
  */
 var maxProduct = function(words) {
-    var alphabet = "abcdefghijklmnopqrstuvwxyz";
-    for(var i=0; i<alphabet.length; i++)
-    {
-        var nextChar = alphabet.charAt(i);
-        var candi = [];
-        for (var j=0; j<words.length; j++){
-
+    var hash = [];
+    for (var i=0; i<words.length; i++){
+        var word = words[i];
+        var val = 0;
+        for(var j = 0; j < word.length; j++){
+            val |= (1 << (word.charCodeAt(j) - "a".charCodeAt(0)));
+        }
+        hash.push(val);
+    }
+    var max = 0;
+    for (var i=0; i<words.length; i++) {
+        for (var j=i+1; j<words.length; j++) {
+            if ((hash[i] & hash[j]) == 0) {
+                var p = words[i].length * words[j].length;
+                if (max < p) max = p;
+            }
         }
     }
+    return max;
 };
+
+maxProduct(["abcw","baz","foo","bar","xtfn","abcdef"]);
