@@ -20,7 +20,7 @@ var maxProduct = function(words) {
         for (var j=i+1; j<words.length; j++) {
             if ((hash[i] & hash[j]) == 0) {
                 var p = words[i].length * words[j].length;
-                if (max < p) max = p;
+                if (max < p) max = p;invertTree()
             }
         }
     }
