@@ -15,4 +15,15 @@ var twoSum = function(nums, target) {
 	return [];
 };
 
-console.log(twoSum([2, 7, 11, 15], 18));
+var twoSum2 = function(nums, target) {
+	var map = {};
+	for(var i = 0; i < nums.length; i++) {
+		var k = target - nums[i];
+		if (map.hasOwnProperty(k)) return [map[k], i];
+		map[nums[i]] = i;
+	}
+
+	return [];
+};
+
+console.log(twoSum2([2, 7, 11, 15], 9));
