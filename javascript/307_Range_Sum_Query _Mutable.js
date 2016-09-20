@@ -2,6 +2,8 @@
  * @constructor
  * @param {number[]} nums
  */
+
+
 var Node = function(start, end) {
 	this.start = start;
 	this.end = end;

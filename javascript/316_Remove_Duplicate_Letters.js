@@ -2,6 +2,10 @@
  * @param {string} s
  * @return {string}
  */
+
+// 贪心
+// 每次取最小字典且没有访问过的
+// 与res.last进行对比, 如果比res.last小, 且res.last的计算大于1则更新, 并吧visited对应的标记位改为false
 var removeDuplicateLetters = function(s) {
 	var counter = {};
 	var visited = {};
