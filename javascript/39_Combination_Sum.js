@@ -5,7 +5,7 @@
  */
 var ret = [];
 var combinationSum = function(candidates, target) {
-	var arr = candidates.sort(function(a, b){return a-b;});
+	var arr = candidates.sort(function(a, b){return b-a;});
 	while (arr[0] > target) {
 		arr.shift();
 	}
@@ -22,7 +22,7 @@ var dfs = function(arr, target, i, arr1) {
 	for (var j = i; j < arr.length; j++) {
 		if (target < arr[j]) return;
 		arr1.push(arr[j]);
-		dfs(arr, target - arr[j], j+1, arr1);
+		dfs(arr, target - arr[j], j, arr1);
 		arr1.pop();
 	}
 	
