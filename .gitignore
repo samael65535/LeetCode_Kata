@@ -1,2 +1,4 @@
 *.out
 .idea
+golang/bin
+golang/pkg

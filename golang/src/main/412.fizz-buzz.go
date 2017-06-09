@@ -1,9 +1,6 @@
 package main
 
-import (
-	"strconv"
-	"fmt"
-)
+import "strconv"
 
 func fizzBuzz(n int) []string {
 	res := []string{}
@@ -23,8 +20,4 @@ func fizzBuzz(n int) []string {
 		res = append(res, a)
 	}
 	return res
-}
-
-func main() {
-	fmt.Println(fizzBuzz(15))
 }
