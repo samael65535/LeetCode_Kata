@@ -1,6 +1,8 @@
 package main
 
-import "sort"
+import (
+	"sort"
+)
 
 func combinationSum(candidates []int, target int) [][]int {
 	res := []([]int){}
@@ -29,4 +31,28 @@ func backtrace(candidates []int, target int, res *[][]int, stack []int) {
 		}
 	}
 
+}
+
+func combinationSum2(candidates []int, target int) [][]int {
+	sort.Ints(candidates)
+	dp := [][][]int{}
+	for i := 1; i <= target; i++ {
+		list := [][]int{}
+		for j := 0; j < len(candidates) && candidates[j] <= i; j++ {
+			if i == candidates[j] {
+				list = append(list, []int{candidates[j]})
+			} else {
+				for _, l := range dp[i-candidates[j]-1] {
+					if candidates[j] < l[0] {
+						cl := []int{}
+						cl = append(cl, candidates[j])
+						cl = append(cl, l...)
+						list = append(list, cl)
+					}
+				}
+			}
+		}
+		dp = append(dp, list)
+	}
+	return dp[target-1]
 }
