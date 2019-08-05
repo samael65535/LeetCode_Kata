@@ -30,7 +30,7 @@ var moveZeroes = function (nums) {
 			nums[nonZeroIdx++] = n
 		}
 	}
-	for (let i = nonZeroIdx; i <l ;i++) {
+	for (let i = nonZeroIdx; i < l; i++) {
 		nums[i] = 0
 	}
 	return nums
