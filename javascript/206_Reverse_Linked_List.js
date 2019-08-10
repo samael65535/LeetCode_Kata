@@ -15,7 +15,6 @@
  */
 var leetcode = require('./leetcode');
 var reverseList = function(head) {
-
     if (head === null) return head;
     var prev = null;
     var current = head;
