@@ -11,9 +11,32 @@ test('98 test', () => {
 	expect(isValidBST(tree([10,5,15,null,null,6,20]))).toBeFalsy()
 })
 
+test('101 test', () => {
+	let isSymmetric= require('../101.symmetric-tree')
+	let treeCreate = leetcode.Tree.create
+	expect(
+		isSymmetric(treeCreate([]))
+	).toBe(true)
+
+	expect(
+		isSymmetric(treeCreate([1, 2, 2]))
+	).toBe(true)
+
+	expect(
+		isSymmetric(treeCreate([1, 2, 1]))
+	).toBe(false)
+
+	expect(
+		isSymmetric(treeCreate([1, 2, 2, 3, 4, 4, 3]))
+	).toBe(true)
+
+	expect(
+		isSymmetric(treeCreate([1, 2, 2, 3, 4, 4]))
+	).toBe(false)
+})
+
 test('104 test', () => {
 	let maxDepth = require('../104.maximum-depth-of-binary-tree')
-	expect(1).toBe(1)
 	expect(
 		maxDepth(leetcode.Tree.create([3,9,20,null,null,15,7]))
 	).toBe(3)
