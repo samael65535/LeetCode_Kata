@@ -6,13 +6,13 @@ test('98 test', () => {
 	expect(isValidBST(tree([2, 1, 3]))).toBeTruthy()
 	expect(isValidBST(tree([1, 2, 3]))).toBeFalsy()
 	expect(isValidBST(tree([1, 3]))).toBeFalsy()
-	expect(isValidBST(tree([5,1,4,null,null,3,6]))).toBeFalsy()
-	expect(isValidBST(tree([8, 3, 10, 1, 6, null,  14, null,  null,  4, 7, 13, null]))).toBeTruthy()
-	expect(isValidBST(tree([10,5,15,null,null,6,20]))).toBeFalsy()
+	expect(isValidBST(tree([5, 1, 4, null, null, 3, 6]))).toBeFalsy()
+	expect(isValidBST(tree([8, 3, 10, 1, 6, null, 14, null, null, 4, 7, 13, null]))).toBeTruthy()
+	expect(isValidBST(tree([10, 5, 15, null, null, 6, 20]))).toBeFalsy()
 })
 
 test('101 test', () => {
-	let isSymmetric= require('../101.symmetric-tree')
+	let isSymmetric = require('../101.symmetric-tree')
 	let treeCreate = leetcode.Tree.create
 	expect(
 		isSymmetric(treeCreate([]))
@@ -35,10 +35,48 @@ test('101 test', () => {
 	).toBe(false)
 })
 
+test('102 test', () => {
+	let levelOrder = require('../102.binary-tree-level-order-traversal')
+	let treeCreate = leetcode.Tree.create
+	expect(
+		levelOrder(treeCreate([]))
+	).toStrictEqual([])
+
+	expect(
+		levelOrder(treeCreate([1, 2, 3]))
+	).toStrictEqual([
+		[1],
+		[2, 3]
+	])
+
+	expect(
+		levelOrder(treeCreate([1, 2, 3, 4, null, 5]))
+	).toStrictEqual([
+		[1],
+		[2, 3],
+		[4, 5],
+
+	])
+
+
+	expect(
+		levelOrder(treeCreate([3, 9, 20, null, null, 15, 7]))
+	).toStrictEqual([
+		[3],
+		[9, 20],
+		[15, 7]
+	])
+
+	expect(
+		levelOrder(treeCreate([1, 2, 3, 4, null, null, 5]))
+	).toStrictEqual([[1], [2, 3], [4, 5]])
+})
+
+
 test('104 test', () => {
 	let maxDepth = require('../104.maximum-depth-of-binary-tree')
 	expect(
-		maxDepth(leetcode.Tree.create([3,9,20,null,null,15,7]))
+		maxDepth(leetcode.Tree.create([3, 9, 20, null, null, 15, 7]))
 	).toBe(3)
 })
 
