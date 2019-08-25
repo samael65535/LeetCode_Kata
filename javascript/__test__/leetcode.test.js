@@ -72,6 +72,19 @@ test('102 test', () => {
 	).toStrictEqual([[1], [2, 3], [4, 5]])
 })
 
+test('103 test', () => {
+	let zigzagLevelOrder = require('../103.binary-tree-zigzag-level-order-traversal')
+	let tree = leetcode.Tree.create;
+	expect(
+		zigzagLevelOrder(tree( [3,9,20,null,null,15,7]))
+	).toStrictEqual(
+		[
+			[3],
+			[20,9],
+			[15,7]
+		]
+	)
+})
 
 test('104 test', () => {
 	let maxDepth = require('../104.maximum-depth-of-binary-tree')
@@ -81,3 +94,10 @@ test('104 test', () => {
 })
 
 
+test('108 test', () => {
+	let sortedArrayToBST = require('../108.convert-sorted-array-to-binary-search-tree')
+	let tree = leetcode.Tree.create;
+	expect(
+		sortedArrayToBST( [-10,-3,0,5,9])
+	).toStrictEqual([0,-3,9,-10,null,5])
+})
