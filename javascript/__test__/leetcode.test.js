@@ -1,16 +1,16 @@
 let leetcode = require('leetcode')
 test('88 test', () => {
 	let merge = require('../88.merge-sorted-array')
-	let nums1 = [1,2,3,0,0,0]
+	let nums1 = [1, 2, 3, 0, 0, 0]
 	// merge(nums1, 3, [2,5,6], 3)
 	// expect(
 	// 	nums1
 	// ).toStrictEqual([1,2,2,3,5,6])
-	nums1 = [-10,-10,-9,-9,-9,-8,-8,-7,-7,-7,-6,-6,-6,-6,-6,-6,-6,-5,-5,-5,-4,-4,-4,-3,-3,-2,-2,-1,-1,0,1,1,1,2,2,2,3,3,3,4,5,5,6,6,6,6,7,7,7,7,8,9,9,9,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-	let m  = 55
-	let nums2 = [-10,-10,-9,-9,-9,-9,-8,-8,-8,-8,-8,-7,-7,-7,-7,-7,-7,-7,-7,-6,-6,-6,-6,-5,-5,-5,-5,-5,-4,-4,-4,-4,-4,-3,-3,-3,-2,-2,-2,-2,-2,-2,-2,-1,-1,-1,0,0,0,0,0,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,4,4,4,4,4,4,4,5,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,8,8,8,8,9,9,9,9]
+	nums1 = [-10, -10, -9, -9, -9, -8, -8, -7, -7, -7, -6, -6, -6, -6, -6, -6, -6, -5, -5, -5, -4, -4, -4, -3, -3, -2, -2, -1, -1, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 9, 9, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	let m = 55
+	let nums2 = [-10, -10, -9, -9, -9, -9, -8, -8, -8, -8, -8, -7, -7, -7, -7, -7, -7, -7, -7, -6, -6, -6, -6, -5, -5, -5, -5, -5, -4, -4, -4, -4, -4, -3, -3, -3, -2, -2, -2, -2, -2, -2, -2, -1, -1, -1, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9]
 	let n = 99
-	merge(nums1, m, nums2,n)
+	merge(nums1, m, nums2, n)
 })
 
 test('98 test', () => {
@@ -90,12 +90,12 @@ test('103 test', () => {
 	let zigzagLevelOrder = require('../103.binary-tree-zigzag-level-order-traversal')
 	let tree = leetcode.Tree.create;
 	expect(
-		zigzagLevelOrder(tree( [3,9,20,null,null,15,7]))
+		zigzagLevelOrder(tree([3, 9, 20, null, null, 15, 7]))
 	).toStrictEqual(
 		[
 			[3],
-			[20,9],
-			[15,7]
+			[20, 9],
+			[15, 7]
 		]
 	)
 })
@@ -112,6 +112,39 @@ test('108 test', () => {
 	let sortedArrayToBST = require('../108.convert-sorted-array-to-binary-search-tree')
 	let tree = leetcode.Tree.create;
 	expect(
-		sortedArrayToBST( [-10,-3,0,5,9])
-	).toStrictEqual([0,-3,9,-10,null,5])
+		sortedArrayToBST([-10, -3, 0, 5, 9])
+	).toStrictEqual([0, -3, 9, -10, null, 5])
+})
+
+test('278 test', () => {
+	let solution = require('../278.first-bad-version')
+	let isBadVersion = (n) => {
+		return n >= 3
+	}
+	expect(
+		solution(isBadVersion)(10)
+	).toBe(3)
+
+	isBadVersion = (n) => {
+		return n >= 1
+	}
+	expect(
+		solution(isBadVersion)(10)
+	).toBe(1)
+
+
+	isBadVersion = (n) => {
+		return n >= 10
+	}
+	expect(
+		solution(isBadVersion)(10)
+	).toBe(10)
+
+
+	isBadVersion = (n) => {
+		return n >= 4
+	}
+	expect(
+		solution(isBadVersion)(5)
+	).toBe(4)
 })
