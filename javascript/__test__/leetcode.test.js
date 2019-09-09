@@ -10,7 +10,6 @@ test('70 test', () => {
 })
 
 
-
 test('88 test', () => {
 	let merge = require('../88.merge-sorted-array')
 	let nums1 = [1, 2, 3, 0, 0, 0]
@@ -128,6 +127,23 @@ test('108 test', () => {
 	).toStrictEqual([0, -3, 9, -10, null, 5])
 })
 
+test('121 test', () => {
+	let maxProfit = require('../121.best-time-to-buy-and-sell-stock')
+	expect(
+		maxProfit([7, 6, 4, 3, 1])
+	).toBe(0)
+
+	expect(
+		maxProfit([7, 1, 5, 3, 6, 4])
+	).toBe(5)
+	expect(
+		maxProfit([7])
+	).toBe(0)
+
+	expect(
+		maxProfit([1,2,3,4,5])
+	).toBe(4)
+})
 test('278 test', () => {
 	let solution = require('../278.first-bad-version')
 	let isBadVersion = (n) => {
@@ -160,3 +176,5 @@ test('278 test', () => {
 		solution(isBadVersion)(5)
 	).toBe(4)
 })
+
+
