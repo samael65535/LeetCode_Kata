@@ -1,11 +1,34 @@
 let leetcode = require('leetcode')
 
+test('53 test', () => {
+	let maxSubArray = require('../53.maximum-subarray')
+	expect(
+		maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+	).toBe(6)
+
+	expect(
+		maxSubArray([1,2,3,4])
+	).toBe(10)
+
+	expect(
+		maxSubArray([-4,-3,-2,-1])
+	).toBe(-1)
+
+	expect(
+		maxSubArray([-1,-3,-2,-1])
+	).toBe(-1)
+
+	expect(
+		maxSubArray([-1,3,-2,-1])
+	).toBe(3)
+
+
+})
+
 test('70 test', () => {
 	let climbStairs = require('../70.climbing-stairs')
 	expect(climbStairs(1)).toBe(1)
 	expect(climbStairs(2)).toBe(2)
-	expect(climbStairs(3)).toBe(4)
-
 	expect(climbStairs(4)).toBe(5)
 })
 
