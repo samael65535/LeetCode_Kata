@@ -1,4 +1,16 @@
 let leetcode = require('leetcode')
+
+test('70 test', () => {
+	let climbStairs = require('../70.climbing-stairs')
+	expect(climbStairs(1)).toBe(1)
+	expect(climbStairs(2)).toBe(2)
+	expect(climbStairs(3)).toBe(4)
+
+	expect(climbStairs(4)).toBe(5)
+})
+
+
+
 test('88 test', () => {
 	let merge = require('../88.merge-sorted-array')
 	let nums1 = [1, 2, 3, 0, 0, 0]
