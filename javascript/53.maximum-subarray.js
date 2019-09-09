@@ -8,8 +8,7 @@ var maxSubArray = function (nums) {
 	let sum = startNum
 	for (let i = 1, l = nums.length; i < l; i++) {
 		if (sum < 0) {
-			startNum = nums[i]
-			sum = startNum
+			sum = nums[i]
 		} else {
 			sum += nums[i]
 		}
