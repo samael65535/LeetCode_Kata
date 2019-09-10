@@ -167,6 +167,18 @@ test('121 test', () => {
 		maxProfit([1,2,3,4,5])
 	).toBe(4)
 })
+
+test('198 test', () => {
+	let rob = require('../198.house-robber')
+	expect(
+		rob([1,2,3,1])
+	).toBe(4)
+
+	expect(
+		rob([2,7,9,3,1])
+	).toBe(12)
+})
+
 test('278 test', () => {
 	let solution = require('../278.first-bad-version')
 	let isBadVersion = (n) => {
