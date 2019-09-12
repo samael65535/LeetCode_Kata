@@ -213,3 +213,8 @@ test('278 test', () => {
 })
 
 
+test('384 test', () => {
+	let Solution = require('../384.shuffle-an-array')
+	let obj = new Solution([1,2,3])
+	obj.
+})
