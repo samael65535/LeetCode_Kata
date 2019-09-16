@@ -26,6 +26,7 @@ Solution.prototype.shuffle = function() {
 		arr.splice(idx, 1)
 	}
 	return res
+
 };
 
 /**
