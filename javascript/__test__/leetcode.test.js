@@ -213,8 +213,57 @@ test('278 test', () => {
 })
 
 
-test('384 test', () => {
-	let Solution = require('../384.shuffle-an-array')
-	let obj = new Solution([1,2,3])
-	obj.
+test('412 test', () => {
+	var fizzBuzz = require('../412.fizz-buzz.js')
+	expect(
+		fizzBuzz(15)
+	).toStrictEqual([
+		"1",
+		"2",
+		"Fizz",
+		"4",
+		"Buzz",
+		"Fizz",
+		"7",
+		"8",
+		"Fizz",
+		"Buzz",
+		"11",
+		"Fizz",
+		"13",
+		"14",
+		"FizzBuzz"
+	])
+
+	expect(
+		fizzBuzz(0)
+	).toStrictEqual([
+	])
+
+	expect(
+		fizzBuzz(16)
+	).toStrictEqual([
+		"1",
+		"2",
+		"Fizz",
+		"4",
+		"Buzz",
+		"Fizz",
+		"7",
+		"8",
+		"Fizz",
+		"Buzz",
+		"11",
+		"Fizz",
+		"13",
+		"14",
+		"FizzBuzz",
+		"16"
+	])
+
+	expect(
+		fizzBuzz(1)
+	).toStrictEqual([
+		"1",
+	])
 })
