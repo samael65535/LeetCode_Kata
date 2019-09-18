@@ -237,6 +237,13 @@ test('278 test', () => {
 	).toBe(4)
 })
 
+test('325 test', () => {
+	let isPowerOfThree = require('../326.power-of-three')
+	expect(isPowerOfThree(27)).toBeTruthy()
+	expect(isPowerOfThree(0)).toBeFalsy()
+	expect(isPowerOfThree(9)).toBeTruthy()
+	expect(isPowerOfThree(45)).toBeFalsy()
+})
 
 test('412 test', () => {
 	var fizzBuzz = require('../412.fizz-buzz.js')
