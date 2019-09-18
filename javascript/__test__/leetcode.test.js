@@ -1,25 +1,34 @@
 let leetcode = require('leetcode')
-
+test('13 test', () => {
+	let romanToInt = require('../13.roman-to-integer')
+	expect(romanToInt('III')).toBe(3)
+	expect(romanToInt('IV')).toBe(4)
+	expect(romanToInt('IX')).toBe(9)
+	expect(romanToInt('XI')).toBe(11)
+	expect(romanToInt('XIV')).toBe(14)
+	expect(romanToInt('LVIII')).toBe(58)
+	expect(romanToInt('MCMXCIV')).toBe(1994)
+})
 test('53 test', () => {
 	let maxSubArray = require('../53.maximum-subarray')
 	expect(
-		maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+		maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
 	).toBe(6)
 
 	expect(
-		maxSubArray([1,2,3,4])
+		maxSubArray([1, 2, 3, 4])
 	).toBe(10)
 
 	expect(
-		maxSubArray([-4,-3,-2,-1])
+		maxSubArray([-4, -3, -2, -1])
 	).toBe(-1)
 
 	expect(
-		maxSubArray([-1,-3,-2,-1])
+		maxSubArray([-1, -3, -2, -1])
 	).toBe(-1)
 
 	expect(
-		maxSubArray([-1,3,-2,-1])
+		maxSubArray([-1, 3, -2, -1])
 	).toBe(3)
 
 
@@ -164,18 +173,18 @@ test('121 test', () => {
 	).toBe(0)
 
 	expect(
-		maxProfit([1,2,3,4,5])
+		maxProfit([1, 2, 3, 4, 5])
 	).toBe(4)
 })
 
 test('198 test', () => {
 	let rob = require('../198.house-robber')
 	expect(
-		rob([1,2,3,1])
+		rob([1, 2, 3, 1])
 	).toBe(4)
 
 	expect(
-		rob([2,7,9,3,1])
+		rob([2, 7, 9, 3, 1])
 	).toBe(12)
 })
 
@@ -269,8 +278,7 @@ test('412 test', () => {
 
 	expect(
 		fizzBuzz(0)
-	).toStrictEqual([
-	])
+	).toStrictEqual([])
 
 	expect(
 		fizzBuzz(16)
