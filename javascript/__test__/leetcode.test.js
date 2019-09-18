@@ -179,6 +179,31 @@ test('198 test', () => {
 	).toBe(12)
 })
 
+test('204 test', () => {
+	let countPrimes = require('../204.count-primes')
+
+	expect(
+		countPrimes(0)
+	).toBe(0)
+
+
+	expect(
+		countPrimes(10)
+	).toBe(4)
+
+	expect(
+		countPrimes(11)
+	).toBe(4)
+
+	expect(
+		countPrimes(12)
+	).toBe(5)
+
+	expect(
+		countPrimes(2)
+	).toBe(0)
+})
+
 test('278 test', () => {
 	let solution = require('../278.first-bad-version')
 	let isBadVersion = (n) => {

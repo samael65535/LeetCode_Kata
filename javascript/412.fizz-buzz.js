@@ -8,15 +8,14 @@ var fizzBuzz = function (n) {
 		return res.slice(0, n)
 	}
 	for (let i = res.length; i < n; i++) {
-		let num = i + 1
-		if (num % 3 == 0 && num % 5 == 0) {
+		if ((i + 1) % 3 == 0 && (i + 1) % 5 == 0) {
 			res.push('FizzBuzz')
-		} else if (num % 3 == 0) {
+		} else if ((i + 1) % 3 == 0) {
 			res.push('Fizz')
-		} else if (num % 5 == 0) {
+		} else if ((i + 1) % 5 == 0) {
 			res.push('Buzz')
 		} else {
-			res.push(String(num))
+			res.push(String(i + 1))
 		}
 	}
 	return res.slice(0, n)
