@@ -9,6 +9,7 @@ test('13 test', () => {
 	expect(romanToInt('LVIII')).toBe(58)
 	expect(romanToInt('MCMXCIV')).toBe(1994)
 })
+
 test('53 test', () => {
 	let maxSubArray = require('../53.maximum-subarray')
 	expect(
@@ -177,6 +178,15 @@ test('121 test', () => {
 	).toBe(4)
 })
 
+test('191 test', () => {
+	let hammingWeight = require('../191.number-of-1-bits')
+	expect(hammingWeight(0)).toBe(0)
+	expect(hammingWeight(1)).toBe(1)
+	expect(hammingWeight(2)).toBe(1)
+	expect(hammingWeight(3)).toBe(2)
+	expect(hammingWeight(4)).toBe(1)
+
+})
 test('198 test', () => {
 	let rob = require('../198.house-robber')
 	expect(
