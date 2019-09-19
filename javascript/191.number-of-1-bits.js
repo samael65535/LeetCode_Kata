@@ -9,9 +9,9 @@ var hammingWeight = function (n) {
 		if (n % 2 == 1) {
 			count++
 		}
-		n = parseInt(n/2)
+		n = parseInt(n / 2)
 	}
 
 	return count
 };
-module.exports =hammingWeight
+module.exports = hammingWeight

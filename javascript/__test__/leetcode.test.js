@@ -317,3 +317,23 @@ test('412 test', () => {
 		"1",
 	])
 })
+
+
+test('461 test', () => {
+	const hammingDistance = require('../461.hamming-distance.js')
+	expect(
+		hammingDistance(1, 4)
+	).toBe(2)
+
+	expect(
+		hammingDistance(4, 1)
+	).toBe(2)
+
+	expect(
+		hammingDistance(1, 0)
+	).toBe(1)
+
+	expect(
+		hammingDistance(0, 0)
+	).toBe(0)
+})
