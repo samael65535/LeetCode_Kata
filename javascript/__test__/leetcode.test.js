@@ -178,6 +178,15 @@ test('121 test', () => {
 	).toBe(4)
 })
 
+test('190 test', () => {
+	let reverseBits = require('../190.reverse-bits.js')
+	expect(
+		reverseBits(0b00000010100101000001111010011100)
+	).toBe(964176192)
+	expect(
+		reverseBits(0b11111111111111111111111111111101)
+	).toBe(3221225471)
+})
 test('191 test', () => {
 	let hammingWeight = require('../191.number-of-1-bits')
 	expect(hammingWeight(0)).toBe(0)
