@@ -160,6 +160,30 @@ test('108 test', () => {
 	).toStrictEqual([0, -3, 9, -10, null, 5])
 })
 
+test('118 test', () => {
+	let generator = require('../118.pascals-triangle')
+
+
+	expect(generator(6)).toStrictEqual([
+		[1],
+		[1,1],
+		[1,2,1],
+		[1,3,3,1],
+		[1,4,6,4,1],
+		[1,5,10,10,5,1]
+	])
+
+	expect(generator(5)).toStrictEqual([
+		[1],
+		[1,1],
+		[1,2,1],
+		[1,3,3,1],
+		[1,4,6,4,1]
+	])
+	expect(generator(1)).toStrictEqual([
+		[1],
+	])
+})
 test('121 test', () => {
 	let maxProfit = require('../121.best-time-to-buy-and-sell-stock')
 	expect(
