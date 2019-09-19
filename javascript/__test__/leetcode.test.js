@@ -10,6 +10,17 @@ test('13 test', () => {
 	expect(romanToInt('MCMXCIV')).toBe(1994)
 })
 
+test('test 20', () => {
+	let isValid = require('../20.valid-parentheses')
+	expect(isValid('')).toBeTruthy()
+	expect(isValid('()')).toBeTruthy()
+	expect(isValid('()[]{}')).toBeTruthy()
+	expect(isValid('(]')).toBeFalsy()
+	expect(isValid('([)]')).toBeFalsy()
+	expect(isValid(']')).toBeFalsy()
+	expect(isValid('[')).toBeFalsy()
+	expect(isValid('{[]}')).toBeTruthy()
+})
 test('53 test', () => {
 	let maxSubArray = require('../53.maximum-subarray')
 	expect(
