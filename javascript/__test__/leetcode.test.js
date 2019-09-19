@@ -267,6 +267,13 @@ test('204 test', () => {
 	).toBe(0)
 })
 
+test('268 test', () => {
+	let missingNumber = require('../268.missing-number')
+	expect(missingNumber([9,6,4,2,3,5,7,0,1])).toBe(8)
+	expect(missingNumber([0,1])).toBe(2)
+	expect(missingNumber([2,1])).toBe(0)
+	expect(missingNumber([0,2])).toBe(1)
+})
 test('278 test', () => {
 	let solution = require('../278.first-bad-version')
 	let isBadVersion = (n) => {
