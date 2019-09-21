@@ -1,4 +1,20 @@
 let leetcode = require('leetcode')
+test('3 test', () => {
+	let lengthOfLongestSubstring = require('../3.longest-substring-without-repeating-characters')
+	expect(lengthOfLongestSubstring('abcabcbb')).toBe(3)
+	expect(lengthOfLongestSubstring('bbbb')).toBe(1)
+	expect(lengthOfLongestSubstring('pwwkew')).toBe(3)
+	expect(lengthOfLongestSubstring('')).toBe(0)
+	expect(lengthOfLongestSubstring('a')).toBe(1)
+	expect(lengthOfLongestSubstring('aa')).toBe(1)
+	expect(lengthOfLongestSubstring('aba')).toBe(2)
+	expect(lengthOfLongestSubstring('aab')).toBe(2)
+	expect(lengthOfLongestSubstring('dvdf')).toBe(3)
+	expect(lengthOfLongestSubstring('dcvdf')).toBe(4)
+	expect(lengthOfLongestSubstring("asjrgapa")).toBe(6)
+
+})
+
 test('13 test', () => {
 	let romanToInt = require('../13.roman-to-integer')
 	expect(romanToInt('III')).toBe(3)
@@ -10,7 +26,30 @@ test('13 test', () => {
 	expect(romanToInt('MCMXCIV')).toBe(1994)
 })
 
-test('test 20', () => {
+test('15 test', () => {
+	let threeSum = require('../15.3sum')
+	expect(
+		threeSum([])
+	).toStrictEqual([])
+	expect(
+		threeSum([1])
+	).toStrictEqual([])
+
+
+
+	expect(
+		threeSum([0, 1, -1])
+	).toStrictEqual([[0, 1, -1].sort()])
+
+	expect(
+		threeSum([0, 1, 1])
+	).toStrictEqual([])
+
+	expect(
+		threeSum([-1,0,1,2,-1,-4])
+	).toStrictEqual([[-1,-1,2].sort(),[-1,0,1].sort()])
+})
+test('20 test', () => {
 	let isValid = require('../20.valid-parentheses')
 	expect(isValid('')).toBeTruthy()
 	expect(isValid('()')).toBeTruthy()
@@ -177,19 +216,19 @@ test('118 test', () => {
 
 	expect(generator(6)).toStrictEqual([
 		[1],
-		[1,1],
-		[1,2,1],
-		[1,3,3,1],
-		[1,4,6,4,1],
-		[1,5,10,10,5,1]
+		[1, 1],
+		[1, 2, 1],
+		[1, 3, 3, 1],
+		[1, 4, 6, 4, 1],
+		[1, 5, 10, 10, 5, 1]
 	])
 
 	expect(generator(5)).toStrictEqual([
 		[1],
-		[1,1],
-		[1,2,1],
-		[1,3,3,1],
-		[1,4,6,4,1]
+		[1, 1],
+		[1, 2, 1],
+		[1, 3, 3, 1],
+		[1, 4, 6, 4, 1]
 	])
 	expect(generator(1)).toStrictEqual([
 		[1],
@@ -269,10 +308,10 @@ test('204 test', () => {
 
 test('268 test', () => {
 	let missingNumber = require('../268.missing-number')
-	expect(missingNumber([9,6,4,2,3,5,7,0,1])).toBe(8)
-	expect(missingNumber([0,1])).toBe(2)
-	expect(missingNumber([2,1])).toBe(0)
-	expect(missingNumber([0,2])).toBe(1)
+	expect(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])).toBe(8)
+	expect(missingNumber([0, 1])).toBe(2)
+	expect(missingNumber([2, 1])).toBe(0)
+	expect(missingNumber([0, 2])).toBe(1)
 })
 test('278 test', () => {
 	let solution = require('../278.first-bad-version')
