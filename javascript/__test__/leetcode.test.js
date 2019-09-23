@@ -60,6 +60,18 @@ test('20 test', () => {
 	expect(isValid('[')).toBeFalsy()
 	expect(isValid('{[]}')).toBeTruthy()
 })
+
+test('49 test', () => {
+	let groupAnagrams = require('../49.group-anagrams')
+	expect(
+		groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
+	).toStrictEqual([[
+		["ate","eat","tea"],
+		["nat","tan"],
+		["bat"]
+	]])
+})
+
 test('53 test', () => {
 	let maxSubArray = require('../53.maximum-subarray')
 	expect(
@@ -104,7 +116,7 @@ test('73 test', () => {
 	//).toStrictEqual()
 })
 
-test('88 test', () => {
+test('88 test',  () => {
 	let merge = require('../88.merge-sorted-array')
 	let nums1 = [1, 2, 3, 0, 0, 0]
 	// merge(nums1, 3, [2,5,6], 3)
