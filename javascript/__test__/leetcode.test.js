@@ -15,6 +15,17 @@ test('3 test', () => {
 
 })
 
+test('5 test', () => {
+	let longestPalindrome = require('../5.longest-palindromic-substring')
+	expect(longestPalindrome('a')).toBe('a')
+	expect(longestPalindrome('aaa')).toBe('aaa')
+	expect(longestPalindrome('aac')).toBe('aa')
+	expect(longestPalindrome('acca')).toBe('acca')
+	expect(longestPalindrome('aa')).toBe('aa')
+	expect(longestPalindrome('babad')).toBe('bab')
+	expect(longestPalindrome('cbbd')).toBe('bb')
+	expect(longestPalindrome('abacab')).toBe("bacab")
+})
 test('13 test', () => {
 	let romanToInt = require('../13.roman-to-integer')
 	expect(romanToInt('III')).toBe(3)
@@ -36,7 +47,6 @@ test('15 test', () => {
 	).toStrictEqual([])
 
 
-
 	expect(
 		threeSum([0, 1, -1])
 	).toStrictEqual([[0, 1, -1].sort()])
@@ -46,8 +56,8 @@ test('15 test', () => {
 	).toStrictEqual([])
 
 	expect(
-		threeSum([-1,0,1,2,-1,-4])
-	).toStrictEqual([[-1,-1,2].sort(),[-1,0,1].sort()])
+		threeSum([-1, 0, 1, 2, -1, -4])
+	).toStrictEqual([[-1, -1, 2].sort(), [-1, 0, 1].sort()])
 })
 test('20 test', () => {
 	let isValid = require('../20.valid-parentheses')
@@ -66,9 +76,9 @@ test('49 test', () => {
 	expect(
 		groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
 	).toStrictEqual([[
-		["ate","eat","tea"],
-		["nat","tan"],
-		["bat"]
+		["ate", "eat", "tea"].sort(),
+		["nat", "tan"].sort(),
+		["bat"].sort()
 	]])
 })
 
@@ -107,16 +117,16 @@ test('70 test', () => {
 test('73 test', () => {
 	let setZeroes = require('../73.set-matrix-zeroes')
 	var matrix = [
-		[0,1,2,0],
-		[3,4,5,2],
-		[1,3,1,5]
+		[0, 1, 2, 0],
+		[3, 4, 5, 2],
+		[1, 3, 1, 5]
 	]
 	//expect(
 	setZeroes(matrix)
 	//).toStrictEqual()
 })
 
-test('88 test',  () => {
+test('88 test', () => {
 	let merge = require('../88.merge-sorted-array')
 	let nums1 = [1, 2, 3, 0, 0, 0]
 	// merge(nums1, 3, [2,5,6], 3)
