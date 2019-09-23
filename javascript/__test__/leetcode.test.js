@@ -92,6 +92,17 @@ test('70 test', () => {
 	expect(climbStairs(4)).toBe(5)
 })
 
+test('73 test', () => {
+	let setZeroes = require('../73.set-matrix-zeroes')
+	var matrix = [
+		[0,1,2,0],
+		[3,4,5,2],
+		[1,3,1,5]
+	]
+	//expect(
+	setZeroes(matrix)
+	//).toStrictEqual()
+})
 
 test('88 test', () => {
 	let merge = require('../88.merge-sorted-array')
