@@ -1,4 +1,36 @@
 let leetcode = require('leetcode')
+
+test('2 test', () => {
+	let addTwoNumbers = require('../2.add-two-numbers')
+	var l1 = leetcode.List.create([2, 4, 3])
+	var l2 = leetcode.List.create([5, 6, 4])
+	expect(
+		leetcode.List.toArray(addTwoNumbers(l1, l2))
+	).toStrictEqual([7, 0, 8])
+
+
+	var l1 = leetcode.List.create([2, 4, 3])
+	var l2 = leetcode.List.create([5, 6])
+	expect(
+		leetcode.List.toArray(addTwoNumbers(l1, l2))
+	).toStrictEqual([7, 0, 4])
+
+
+	var l1 = leetcode.List.create([2, 4])
+	var l2 = leetcode.List.create([5, 6])
+	expect(
+		leetcode.List.toArray(addTwoNumbers(l1, l2))
+	).toStrictEqual([7, 0, 1])
+
+	var l1 = leetcode.List.create([2])
+	var l2 = leetcode.List.create([5, 6, 2, 3, 1])
+	expect(
+		leetcode.List.toArray(addTwoNumbers(l1, l2))
+	).toStrictEqual([7, 6, 2, 3, 1])
+})
+
+
+
 test('3 test', () => {
 	let lengthOfLongestSubstring = require('../3.longest-substring-without-repeating-characters')
 	expect(lengthOfLongestSubstring('abcabcbb')).toBe(3)
