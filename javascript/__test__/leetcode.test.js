@@ -387,6 +387,10 @@ test('325 test', () => {
 	expect(isPowerOfThree(45)).toBeFalsy()
 })
 
+test('334 test', () => {
+	let increasingTriplet = require('../334.increasing-triplet-subsequence')
+	expect(increasingTriplet([2,4,-2,-3])).toBeFalsy()
+})
 test('412 test', () => {
 	var fizzBuzz = require('../412.fizz-buzz.js')
 	expect(
@@ -475,7 +479,7 @@ test('994 test', () => {
 
 	expect(
 		orangesRotting([[0, 2]])
-	).toBe(0)zhi
+	).toBe(0)
 
 	expect(
 		orangesRotting([[0, 1]])
