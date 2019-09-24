@@ -419,6 +419,34 @@ test('325 test', () => {
 	expect(isPowerOfThree(45)).toBeFalsy()
 })
 
+test('328 test', () => {
+	let oddEvenList = require('../328.odd-even-linked-list')
+	var list = leetcode.List.create([1, 2, 3, 4, 5, 6])
+	expect(
+		leetcode.List.toArray(oddEvenList(list))
+	).toStrictEqual([1, 3, 5, 2, 4, 6])
+
+	var list = leetcode.List.create([1, 2, 3, 4, 5])
+	expect(
+		leetcode.List.toArray(oddEvenList(list))
+	).toStrictEqual([1, 3, 5, 2, 4])
+
+	var list = leetcode.List.create([1])
+	expect(
+		leetcode.List.toArray(oddEvenList(list))
+	).toStrictEqual([1])
+
+	var list = leetcode.List.create([1, 2])
+	expect(
+		leetcode.List.toArray(oddEvenList(list))
+	).toStrictEqual([1, 2])
+
+
+	var list = leetcode.List.create([])
+	expect(
+		leetcode.List.toArray(oddEvenList(list))
+	).toStrictEqual([])
+})
 test('334 test', () => {
 	let increasingTriplet = require('../334.increasing-triplet-subsequence')
 	expect(increasingTriplet([2,4,-2,-3])).toBeFalsy()
