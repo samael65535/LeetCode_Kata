@@ -475,7 +475,7 @@ test('994 test', () => {
 
 	expect(
 		orangesRotting([[0, 2]])
-	).toBe(0)
+	).toBe(0)zhi
 
 	expect(
 		orangesRotting([[0, 1]])
