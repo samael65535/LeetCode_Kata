@@ -460,3 +460,28 @@ test('461 test', () => {
 		hammingDistance(0, 0)
 	).toBe(0)
 })
+
+
+test('994 test', () => {
+	const orangesRotting = require('../994.rotting-oranges.js')
+	expect(
+		orangesRotting([[2,1,1],[1,1,0],[0,1,1]])
+	).toBe(4)
+
+	expect(
+		orangesRotting([[2,1,1],[0,1,1],[1,0,1]])
+	).toBe(-1)
+
+
+	expect(
+		orangesRotting([[0, 2]])
+	).toBe(0)
+
+	expect(
+		orangesRotting([[0, 1]])
+	).toBe(-1)
+
+	expect(
+		orangesRotting([[2],[1],[1],[1],[2],[1],[1]])
+	).toBe(2)
+})
