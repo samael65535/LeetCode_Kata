@@ -12,22 +12,23 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var leetcode = require('./leetcode');
+
 var inorderTraversal = function(root) {
     var ret = [];
-    var queue = [];
+    var stack = [];
     var r = root;
-    while(queue.length > 0 || r) {
+    while(stack.length > 0 || r) {
         if (!r) {
-            r = queue.pop();
+            r = stack.pop();
             ret.push(r.val);
             r = r.right;
         } else {
-            queue.push(r);
+            stack.push(r);
             r = r.left;
         }
     }
     return ret;
 };
+var leetcode = require('./leetcode');
 var root = leetcode.Tree.create([1,2,3]);
 console.log(inorderTraversal(root));
