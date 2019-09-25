@@ -317,6 +317,10 @@ test('121 test', () => {
 	).toBe(4)
 })
 
+test( '160 test', () => {
+	let getIntersectionNode = require('../160.intersection-of-two-linked-lists')
+
+})
 test('190 test', () => {
 	let reverseBits = require('../190.reverse-bits.js')
 	expect(
