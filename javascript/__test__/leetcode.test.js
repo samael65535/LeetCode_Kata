@@ -30,7 +30,6 @@ test('2 test', () => {
 })
 
 
-
 test('3 test', () => {
 	let lengthOfLongestSubstring = require('../3.longest-substring-without-repeating-characters')
 	expect(lengthOfLongestSubstring('abcabcbb')).toBe(3)
@@ -283,6 +282,12 @@ test('108 test', () => {
 	).toStrictEqual([0, -3, 9, -10, null, 5])
 })
 
+test('116 test', () => {
+	const connect = require('../116.populating-next-right-pointers-in-each-node.js')
+	let root = leetcode.Tree.create([1, 2, 3, 4, 5, 6, 7])
+	connect(root)
+
+})
 test('118 test', () => {
 	let generator = require('../118.pascals-triangle')
 
@@ -325,7 +330,7 @@ test('121 test', () => {
 	).toBe(4)
 })
 
-test( '160 test', () => {
+test('160 test', () => {
 	let getIntersectionNode = require('../160.intersection-of-two-linked-lists')
 
 
@@ -462,7 +467,7 @@ test('328 test', () => {
 })
 test('334 test', () => {
 	let increasingTriplet = require('../334.increasing-triplet-subsequence')
-	expect(increasingTriplet([2,4,-2,-3])).toBeFalsy()
+	expect(increasingTriplet([2, 4, -2, -3])).toBeFalsy()
 })
 test('412 test', () => {
 	var fizzBuzz = require('../412.fizz-buzz.js')
@@ -542,11 +547,11 @@ test('461 test', () => {
 test('994 test', () => {
 	const orangesRotting = require('../994.rotting-oranges.js')
 	expect(
-		orangesRotting([[2,1,1],[1,1,0],[0,1,1]])
+		orangesRotting([[2, 1, 1], [1, 1, 0], [0, 1, 1]])
 	).toBe(4)
 
 	expect(
-		orangesRotting([[2,1,1],[0,1,1],[1,0,1]])
+		orangesRotting([[2, 1, 1], [0, 1, 1], [1, 0, 1]])
 	).toBe(-1)
 
 
@@ -559,6 +564,6 @@ test('994 test', () => {
 	).toBe(-1)
 
 	expect(
-		orangesRotting([[2],[1],[1],[1],[2],[1],[1]])
+		orangesRotting([[2], [1], [1], [1], [2], [1], [1]])
 	).toBe(2)
 })
