@@ -330,9 +330,11 @@ test('121 test', () => {
 	).toBe(4)
 })
 
-test('160 test', () => {
-	let getIntersectionNode = require('../160.intersection-of-two-linked-lists')
-
+test('131 test', () => {
+	let partition = require('../131.palindrome-partitioning.js')
+	console.log(partition('aab'))
+	console.log(partition('a'))
+	console.log(partition('ab'))
 
 })
 test('190 test', () => {
