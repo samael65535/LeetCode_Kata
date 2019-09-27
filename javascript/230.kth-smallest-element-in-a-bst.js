@@ -23,3 +23,4 @@ var kthSmallest = function(root, k) {
 	return list[k-1]
 };
 module.exports = kthSmallest
+

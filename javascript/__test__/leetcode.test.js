@@ -364,6 +364,39 @@ test('198 test', () => {
 	).toBe(12)
 })
 
+
+test('200 test', () => {
+	let numIslands = require('../200.number-of-islands.js')
+	expect(
+		numIslands([
+			'11110'.split(''),
+			'11010'.split(''),
+			'11000'.split(''),
+			'00000'.split(''),
+		])
+	).toBe(1)
+
+	expect(
+		numIslands([
+			'11000'.split(''),
+			'11000'.split(''),
+			'00100'.split(''),
+			'00011'.split(''),
+		])
+	).toBe(3)
+
+	expect(
+		numIslands([
+			'11000'.split(''),
+		])
+	).toBe(1)
+
+	expect(
+		numIslands([
+			'1001'.split(''),
+		])
+	).toBe(2)
+})
 test('204 test', () => {
 	let countPrimes = require('../204.count-primes')
 
@@ -523,6 +556,12 @@ test('412 test', () => {
 	])
 })
 
+test('440 test', () => {
+	const findKthNumber = require('../440.k-th-smallest-in-lexicographical-order')
+	 expect(
+	 	findKthNumber(100, 100)
+	 ).toBe(99)
+})
 
 test('461 test', () => {
 	const hammingDistance = require('../461.hamming-distance.js')
