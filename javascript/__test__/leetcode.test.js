@@ -424,6 +424,46 @@ test('204 test', () => {
 	).toBe(0)
 })
 
+test('240 test', () => {
+	let searchMatrix = require('../240.search-a-2d-matrix-ii')
+	expect(searchMatrix([
+			[1, 2, 4, 5, 8],
+			[2, 3, 5, 7, 9]
+		], 2
+	)).toBeTruthy()
+
+	expect(searchMatrix([
+			[1, 2, 4, 5],
+			[3, 4, 5, 6]
+		], 2
+	)).toBeTruthy()
+
+	expect(searchMatrix([
+			[1, 2, 3, 5],
+			[3, 4, 10, 12],
+			[5, 6, 11, 13]
+		], 4
+	)).toBeTruthy()
+	expect(searchMatrix([
+		[1, 4, 7, 11, 15],
+		[2, 5, 8, 12, 19],
+		[3, 6, 9, 16, 22],
+		[10, 13, 14, 17, 24],
+		[18, 21, 23, 26, 30]
+	], 5)).toBeTruthy()
+
+	expect(searchMatrix([
+		[5]
+	], 5)).toBeTruthy()
+	expect(searchMatrix([
+			[1, 4, 7, 11, 15],
+			[2, 5, 8, 12, 19],
+			[3, 6, 9, 16, 22],
+			[10, 13, 14, 17, 24],
+			[18, 21, 23, 26, 30]
+		], 20)).toBeFalsy()
+})
+
 test('268 test', () => {
 	let missingNumber = require('../268.missing-number')
 	expect(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])).toBe(8)
@@ -560,9 +600,9 @@ test('412 test', () => {
 
 test('440 test', () => {
 	const findKthNumber = require('../440.k-th-smallest-in-lexicographical-order')
-	 expect(
-	 	findKthNumber(100, 100)
-	 ).toBe(99)
+	expect(
+		findKthNumber(100, 100)
+	).toBe(99)
 })
 
 test('461 test', () => {
