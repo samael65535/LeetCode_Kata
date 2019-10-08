@@ -38,6 +38,7 @@ var exist = function (board, word) {
 	return false
 }
 
+// TODO 是否可以生成链表？
 // console.log(exist([
 // 		['A','B','C','E'],
 // 		['S','F','C','S'],
