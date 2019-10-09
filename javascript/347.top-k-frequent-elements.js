@@ -10,18 +10,18 @@ var topKFrequent = function (nums, k) {
 		if (!ans[c]) ans[c] = [c, 0]
 		ans[c][1]++
 	}
-	console.log(ans)
-	let list  = Object.values(ans).sort((a, b) => {
+	let list = Object.values(ans).sort((a, b) => {
 		return b[1] - a[1]
 	})
 
-	console.log(list)
 	list = list.map((i) => {
-			return i[0]
-		})
+		return i[0]
+	})
 	return list.slice(0, k)
 
 };
+
+
 // console.log(topKFrequent([1,1,1,2,2,3], 2))
 // console.log(topKFrequent([1], 1))
-console.log(topKFrequent([-1, -1], 2))
+//console.log(topKFrequent([-1, -1], 2))

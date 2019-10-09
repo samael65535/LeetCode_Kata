@@ -504,6 +504,7 @@ test('278 test', () => {
 	).toBe(4)
 })
 
+
 test('325 test', () => {
 	let isPowerOfThree = require('../326.power-of-three')
 	expect(isPowerOfThree(27)).toBeTruthy()
