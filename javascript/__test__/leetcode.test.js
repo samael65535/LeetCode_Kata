@@ -102,6 +102,33 @@ test('20 test', () => {
 	expect(isValid('{[]}')).toBeTruthy()
 })
 
+test('34 test', () => {
+	let searchRange = require('../34.find-first-and-last-position-of-element-in-sorted-array')
+	expect(
+		searchRange([5, 7, 7, 8, 8, 10], 8)
+	).toStrictEqual([3, 4])
+
+	expect(
+		searchRange([5, 5, 5, 8, 8, 10], 5)
+	).toStrictEqual([0, 2])
+	expect(
+		searchRange([5, 5, 7, 8, 8, 10], 5)
+	).toStrictEqual([0, 1])
+
+
+	expect(
+		searchRange([5, 5, 7, 8, 8, 10], 1)
+	).toStrictEqual([-1, -1])
+
+	expect(
+		searchRange([5, 5, 7, 8, 8, 10], 10)
+	).toStrictEqual([5, 5])
+
+	expect(
+		searchRange([5, 5, 5], 5)
+	).toStrictEqual([0, 2])
+
+})
 test('49 test', () => {
 	let groupAnagrams = require('../49.group-anagrams')
 	expect(
@@ -456,12 +483,12 @@ test('240 test', () => {
 		[5]
 	], 5)).toBeTruthy()
 	expect(searchMatrix([
-			[1, 4, 7, 11, 15],
-			[2, 5, 8, 12, 19],
-			[3, 6, 9, 16, 22],
-			[10, 13, 14, 17, 24],
-			[18, 21, 23, 26, 30]
-		], 20)).toBeFalsy()
+		[1, 4, 7, 11, 15],
+		[2, 5, 8, 12, 19],
+		[3, 6, 9, 16, 22],
+		[10, 13, 14, 17, 24],
+		[18, 21, 23, 26, 30]
+	], 20)).toBeFalsy()
 })
 
 test('268 test', () => {
