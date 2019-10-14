@@ -2,3 +2,6 @@
 .idea
 golang/bin
 golang/pkg
+interview/*
+javascript/171.excel-sheet-column-number.js
+javascript/292.nim-game.js

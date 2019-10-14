@@ -4,13 +4,10 @@
  * @return {number[]}
  */
 var searchRange = function (nums, target) {
+	// 找start
 	let start = 0
 	let end = nums.length
 	let mid;
-
-	// 找start
-	start = 0
-	end = nums.length
 
 	let b = -1
 	while (start < end) {
