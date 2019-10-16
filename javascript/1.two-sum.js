@@ -14,3 +14,4 @@ var twoSum = function (nums, target) {
 };
 
 console.log(twoSum([3, 5, 1], 6))
+iyca
