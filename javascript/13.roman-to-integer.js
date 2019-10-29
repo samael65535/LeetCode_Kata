@@ -18,16 +18,16 @@ var romanToInt = function (s) {
 		// acc+cur
 		// *2 是把上次的累加也减了
 		let c = list[index - 1];
-		if(cur == 'V' || cur =='X') {
-			if(c == 'I') {
+		if (cur == 'V' || cur == 'X') {
+			if (c == 'I') {
 				acc -= dic[c] * 2
 			}
-		} else if(cur == 'L' || cur =='C') {
-			if(c == 'X') {
+		} else if (cur == 'L' || cur == 'C') {
+			if (c == 'X') {
 				acc -= dic[c] * 2
 			}
-		} else if(cur == 'D' || cur =='M') {
-			if(c == 'C') {
+		} else if (cur == 'D' || cur == 'M') {
+			if (c == 'C') {
 				acc -= dic[c] * 2
 			}
 		}
